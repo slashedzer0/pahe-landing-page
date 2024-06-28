@@ -1,0 +1,414 @@
+<!doctype html>
+<html class="!scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pahe Premium</title>
+  <link rel="icon" href="/public/favicon.ico">
+  <link href="/public/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+
+<body>
+  <header>
+    <div class="bg-[#0b0b0b]">
+      <div class="absolute inset-x-0 top-0 z-50">
+        <div class="mx-auto max-w-2xl lg:max-w-7xl">
+          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Pahe Premium</span>
+                <img class="h-14 w-auto" src="public/img/pahe-logo.png" alt="">
+              </a>
+            </div>
+            <div class="flex lg:hidden">
+              <button id="openMenuButton" type="button"
+                class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
+                <span class="sr-only">Buka menu utama</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:flex lg:flex-1 lg:gap-x-12 lg:justify-end">
+              <a href="#unggulan"
+                class="text-md leading-6 text-white transition duration-200 hover:underline">Unggulan</a>
+              <a href="#paket" class="text-md leading-6 text-white transition duration-200 hover:underline">Paket</a>
+              <a href="#bantuan"
+                class="text-md leading-6 text-white transition duration-200 hover:underline">Bantuan</a>
+              <a href="404.html" target="_blank"
+                class="text-md leading-6 text-white transition duration-200 hover:underline">Masuk</a>
+            </div>
+          </nav>
+        </div>
+
+        <div id="mobileMenu" class="lg:hidden" role="dialog" aria-modal="true">
+          <div id="menuBackdrop"
+            class="fixed inset-0 z-50 hidden bg-[#0b0b0b] bg-opacity-25 transition-opacity duration-300 ease-in-out"></div>
+          <div id="menuContent"
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#0b0b0b] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 transform translate-x-full transition duration-300 ease-in-out">
+            <div class="flex items-center justify-between">
+              <a href="javascript:void(0);" class="-m-1.5 p-1.5">
+                <span class="sr-only">Pahe Premium</span>
+                <img class="h-8 w-auto" src="public/img/pahe-logo.png" alt="">
+              </a>
+              <button id="closeMenuButton" type="button" class="-m-2.5 rounded-md p-2.5 text-white">
+                <span class="sr-only">Tutup menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-[#4b4b4b]/50">
+                <div class="space-y-2 py-6">
+                  <a href="#unggulan"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff]">Unggulan</a>
+                  <a href="#paket"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff]">Paket</a>
+                  <a href="#bantuan"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff] ">Bantuan</a>
+                </div>
+                <div class="py-6">
+                  <a href="404.html" target="_blank"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff]">Masuk</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative isolate overflow-hidden pt-14">
+        <img src="public/img/pahe-hero.png" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+        <div class="absolute inset-0 -z-10 bg-[#0b0b0b] opacity-75"></div>
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true">
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#2c6ac7] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+          </div>
+        </div>
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div class="text-center">
+            <h1 class="text-5xl font-heading font-bold tracking-tight text-white lg:leading-snug">
+              Akses Softcopy
+              <br class="sm:hidden">
+              Lebih Awal
+            </h1>
+            <p class="mx-3 mt-6 max-w-2xl text-center text-md leading-8 text-white">Nikmati berbagai tontonan rilisan
+              terbaru
+              lebih awal dengan kualitas encode terbaik. Bergabunglah sekarang dan jadilah yang pertama menyaksikan
+              tontonan favoritmu.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#paket"
+                class="rounded-md bg-[#1aaaff] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 ease-in-out hover:bg-[#1a98ff]">Gabung
+                Sekarang</a>
+              <a href="javascript:(0);"
+                onclick="if (window.innerWidth < 768) { window.open('https://youtu.be/m4nfDQSKXJ0', '_blank'); } else { openPopup(); }"
+                class="text-sm font-semibold leading-6 text-white">
+                Selengkapnya
+                <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true">
+          <div
+            class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Featured -->
+    <section id="unggulan">
+      <div class="bg-[#0b0b0b]">
+        <div
+          class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 delay-[150ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0">
+          <div class="mx-auto max-w-4xl text-center">
+            <h2 class="text-base font-semibold leading-7 text-[#1aaaff]">UNGGULAN</h2>
+            <p class="mt-2 text-5xl font-heading font-bold tracking-tight text-white">Sajian Istimewa Minggu Ini</p>
+          </div>
+          <p class="mx-auto mt-6 mb-16 max-w-2xl text-center text-md leading-8 text-white">Temukan tontonan yang akan
+            menemani akhir pekanmu dengan deretan film dan serial terbaru yang sedang tayang.</p>
+
+          <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            <a href="javascript:void(0);"
+              class="group delay-[200ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0">
+              <div class="aspect-h-3 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200">
+                <img src="public/img/oxxqiyWrnM0XPnBtVe9TgYWnPxT.jpg"
+                  class="h-full w-full object-cover object-center group-hover:opacity-75">
+              </div>
+            </a>
+            <a href="javascript:void(0);"
+              class="group delay-[300ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0">
+              <div class="aspect-h-3 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200">
+                <img src="public/img/aAnTgKWZ8UdMQTc9EebMLkowqhm.jpg"
+                  class="h-full w-full object-cover object-center group-hover:opacity-75">
+              </div>
+            </a>
+            <a href="javascript:void(0);"
+              class="group delay-[400ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0">
+              <div class="aspect-h-3 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200">
+                <img src="public/img/ntRU0OA4etGGiMMmH1Yw0bnaMdW.jpg"
+                  class="h-full w-full object-cover object-center group-hover:opacity-75">
+              </div>
+            </a>
+            <a href="javascript:void(0);"
+              class="group delay-[500ms] duration-[600ms] taos:translate-y-[200px] taos:opacity-0">
+              <div class="aspect-h-3 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200">
+                <img src="public/img/iADOJ8Zymht2JPMoy3R7xceZprc.jpg"
+                  class="h-full w-full object-cover object-center group-hover:opacity-75">
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="paket">
+      <div class="bg-[#0b0b0b] py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 delay-[150ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0">
+          <div class="mx-auto max-w-4xl text-center">
+            <h2 class="text-base font-semibold leading-7 text-[#1aaaff]">PAKET</h2>
+            <p class="mt-2 text-5xl font-heading font-bold tracking-tight text-white">Nonton Seru, Harga Hemat</p>
+          </div>
+          <p class="mx-auto mt-6 max-w-2xl text-center text-md leading-8 text-white">Dari penikmat film kasual hingga
+            penggemar berat serial, kami punya paket yang sempurna untuk semua orang.</p>
+          <div class="mt-16 flex justify-center">
+            <fieldset aria-label="Payment frequency">
+              <div
+                class="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold leading-5 ring-1 ring-inset ring-[#4b4b4b]">
+                <label id="bulanan" class="cursor-pointer rounded-full px-2.5 py-1 bg-[#1aaaff]">
+                  <input type="radio" name="frequency" value="monthly" class="sr-only">
+                  <span>Bulanan</span>
+                </label>
+                <label id="tahunan" class="cursor-pointer rounded-full px-2.5 py-1 text-white">
+                  <input type="radio" name="frequency" value="annually" class="sr-only">
+                  <span>Tahunan</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div
+              class="rounded-3xl p-8 xl:p-10 ring-1 ring-[#4b4b4b] delay-[100ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
+              data-taos-offset="200">
+              <div class="flex items-center justify-between gap-x-4">
+                <h3 id="tier-basic" class="text-lg font-semibold leading-8 text-white">Basic</h3>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-white">
+                Cocok untuk kamu yang suka menghemat dan ingin mencoba layanan kami.</p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-white">Rp 5.000</span>
+                <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
+              </p>
+              <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Iklan terbatas
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Kualitas video hingga 720p
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  1 perangkat
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none " viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+
+                </li>
+              </ul>
+              <a onclick="buyPackage()" aria-describedby="tier-basic"
+                class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1aaaff] text-[#1aaaff] ring-1 ring-inset ring-[#1aaaff] transition-colors duration-200 ease-in-out hover:text-white hover:ring-white hover:focus-visible:outline-white cursor-pointer">Beli
+                Paket
+              </a>
+            </div>
+            <div
+              class="rounded-3xl p-8 xl:p-10 ring-2 ring-[#1aaaff] delay-[200ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
+              data-taos-offset="200"">
+              <div class=" flex items-center justify-between gap-x-4">
+              <h3 id="tier-premium" class="text-lg font-semibold leading-8 text-[#1aaaff]">Premium</h3>
+              <p class="rounded-full bg-[#1aaaff]/10 px-2.5 py-1 text-sm font-semibold leading-5 text-[#1aaaff]">
+                Terlaris 🔥</p>
+            </div>
+            <p class="mt-4 text-sm leading-6 text-white">Pilihan terbaik untuk pengalaman nonton secara maksimal.
+            </p>
+            <p class="mt-6 flex items-baseline gap-x-1">
+              <span class="text-4xl font-bold tracking-tight text-white">Rp 20.000</span>
+              <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
+            </p>
+            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Bebas iklan
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Kualitas video hingga 1080p
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                2 perangkat
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                  aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd" />
+                </svg>
+                Akses awal
+              </li>
+            </ul>
+            <a onclick="buyPackage()" aria-describedby="tier-premium"
+              class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 bg-[#1aaaff] text-white shadow-sm transition-colors duration-200 ease-in-out hover:bg-[#1a98ff] cursor-pointer">Beli
+              Paket
+            </a>
+          </div>
+          <div
+            class="rounded-3xl p-8 xl:p-10 ring-1 ring-[#4b4b4b] delay-[300ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
+            data-taos-offset="200"">
+              <div class=" flex items-center justify-between gap-x-4">
+            <h3 id="tier-family" class="text-lg font-semibold leading-8 text-white">Family</h3>
+          </div>
+          <p class="mt-4 text-sm leading-6 text-white">Berbagi hiburan bersama keluarga tak pernah semudah ini.
+          </p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <span class="text-4xl font-bold tracking-tight text-white">Rp 80.000</span>
+            <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
+          </p>
+          <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Semua fitur Premium
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Kualitas video hingga 4K
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              5 perangkat
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                  clip-rule="evenodd" />
+              </svg>
+              Profil terpisah
+            </li>
+          </ul>
+          <a onclick="buyPackage()" aria-describedby="tier-family"
+            class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1aaaff] text-[#1aaaff] ring-1 ring-inset ring-[#1aaaff] transition-colors duration-200 ease-in-out hover:text-white hover:ring-white hover:focus-visible:outline-white cursor-pointer">Beli
+            Paket
+          </a>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Help Center -->
+    <section id="bantuan">
+      <div class="bg-[#1aaaff] py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-4xl text-center">
+            <h2 class="text-base font-semibold leading-7 text-[#0b0b0b]">BANTUAN</h2>
+            <p class="mt-0.5 text-5xl font-heading font-bold tracking-tight text-white lg:leading-snug">Ada Sesuatu Yang
+              Ingin <br>
+              Ditanyakan?</p>
+          </div>
+          <div class="flex justify-center mt-10">
+            <a href="javascript:void(0);"
+              class="rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-[#0b0b0b] shadow-sm transition-colors duration-200 ease-in-out hover:bg-gray-100">
+              Kunjungi Pusat Bantuan
+            </a>
+          </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#0b0b0b]">
+    <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+      <div class="flex justify-center space-x-6 md:order-2">
+        <p class="text-center text-sm leading-5 text-white underline cursor-pointer">Tentang</p>
+        <p class="text-center text-sm leading-5 text-white underline cursor-pointer">Syarat dan Ketentuan</p>
+        <p class="text-center text-sm leading-5 text-white underline cursor-pointer">Kebijakan Privasi</p>
+        <p class="text-center text-sm leading-5 text-white underline cursor-pointer">DMCA</p>
+      </div>
+      <div class="mt-8 md:order-1 md:mt-0">
+        <p class="text-center text-sm leading-5 text-white">&copy; 2024 Pahe Group</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/public/js/taos.js"></script>
+  <script src="/public/js/main.js"></script>
+</body>
+
+</html>
