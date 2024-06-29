@@ -44,15 +44,16 @@
               <a href="#paket" class="text-md leading-6 text-white transition duration-200 hover:underline">Paket</a>
               <a href="#bantuan"
                 class="text-md leading-6 text-white transition duration-200 hover:underline">Bantuan</a>
-              <a href="404.html" target="_blank"
-                class="text-md leading-6 text-white transition duration-200 hover:underline">Masuk</a>
+              <a onclick="redirectTo404()"
+                class="text-md leading-6 text-white transition duration-200 hover:underline cursor-pointer">Masuk</a>
             </div>
           </nav>
         </div>
 
         <div id="mobileMenu" class="lg:hidden" role="dialog" aria-modal="true">
           <div id="menuBackdrop"
-            class="fixed inset-0 z-50 hidden bg-[#0b0b0b] bg-opacity-25 transition-opacity duration-300 ease-in-out"></div>
+            class="fixed inset-0 z-50 hidden bg-[#0b0b0b] bg-opacity-25 transition-opacity duration-300 ease-in-out">
+          </div>
           <div id="menuContent"
             class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#0b0b0b] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 transform translate-x-full transition duration-300 ease-in-out">
             <div class="flex items-center justify-between">
@@ -79,8 +80,8 @@
                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff] ">Bantuan</a>
                 </div>
                 <div class="py-6">
-                  <a href="404.html" target="_blank"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff]">Masuk</a>
+                  <a onclick="redirectTo404()"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-[#1aaaff] cursor-pointer">Masuk</a>
                 </div>
               </div>
             </div>
@@ -100,7 +101,7 @@
         </div>
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div class="text-center">
-            <h1 class="text-5xl font-heading font-bold tracking-tight text-white lg:leading-snug">
+            <h1 class="text-5xl font-heading font-bold tracking-tight text-white">
               Akses Softcopy
               <br class="sm:hidden">
               Lebih Awal
@@ -113,8 +114,7 @@
               <a href="#paket"
                 class="rounded-md bg-[#1aaaff] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors duration-200 ease-in-out hover:bg-[#1a98ff]">Gabung
                 Sekarang</a>
-              <a 
-                onclick="if (window.innerWidth < 768) { window.open('https://youtu.be/m4nfDQSKXJ0', '_blank'); } else { openPopup(); }"
+              <a onclick="if (window.innerWidth < 768) { window.open('https://youtu.be/m4nfDQSKXJ0', '_blank'); } else { openPopup(); }"
                 class="text-sm font-semibold leading-6 text-white cursor-pointer">
                 Selengkapnya
                 <span aria-hidden="true">→</span></a>
@@ -256,7 +256,7 @@
 
                 </li>
               </ul>
-              <a onclick="buyPackage()" aria-describedby="tier-basic"
+              <a onclick="redirectTo404()" aria-describedby="tier-basic"
                 class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1aaaff] text-[#1aaaff] ring-1 ring-inset ring-[#1aaaff] transition-colors duration-200 ease-in-out hover:text-white hover:ring-white hover:focus-visible:outline-white cursor-pointer">Beli
                 Paket
               </a>
@@ -265,112 +265,116 @@
               class="rounded-3xl p-8 xl:p-10 ring-2 ring-[#1aaaff] delay-[200ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
               data-taos-offset="200">
               <div class=" flex items-center justify-between gap-x-4">
-              <h3 id="tier-premium" class="text-lg font-semibold leading-8 text-[#1aaaff]">Premium</h3>
-              <p class="rounded-full bg-[#1aaaff]/10 px-2.5 py-1 text-sm font-semibold leading-5 text-[#1aaaff]">
-                Terlaris 🔥</p>
+                <h3 id="tier-premium" class="text-lg font-semibold leading-8 text-[#1aaaff]">Premium</h3>
+                <p class="rounded-full bg-[#1aaaff]/10 px-2.5 py-1 text-sm font-semibold leading-5 text-[#1aaaff]">
+                  Terlaris 🔥</p>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-white">Pilihan terbaik untuk pengalaman nonton secara maksimal.
+              </p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-white">Rp 20.000</span>
+                <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
+              </p>
+              <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Bebas iklan
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Kualitas video hingga 1080p
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  2 perangkat
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Akses awal
+                </li>
+              </ul>
+              <a onclick="redirectTo404()" aria-describedby="tier-premium"
+                class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 bg-[#1aaaff] text-white shadow-sm transition-colors duration-200 ease-in-out hover:bg-[#1a98ff] cursor-pointer">Beli
+                Paket
+              </a>
             </div>
-            <p class="mt-4 text-sm leading-6 text-white">Pilihan terbaik untuk pengalaman nonton secara maksimal.
-            </p>
-            <p class="mt-6 flex items-baseline gap-x-1">
-              <span class="text-4xl font-bold tracking-tight text-white">Rp 20.000</span>
-              <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
-            </p>
-            <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
-              <li class="flex gap-x-3">
-                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Bebas iklan
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Kualitas video hingga 1080p
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                2 perangkat
-              </li>
-              <li class="flex gap-x-3">
-                <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
-                  aria-hidden="true">
-                  <path fill-rule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clip-rule="evenodd" />
-                </svg>
-                Akses awal
-              </li>
-            </ul>
-            <a onclick="buyPackage()" aria-describedby="tier-premium"
-              class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 bg-[#1aaaff] text-white shadow-sm transition-colors duration-200 ease-in-out hover:bg-[#1a98ff] cursor-pointer">Beli
-              Paket
-            </a>
-          </div>
-          <div
-            class="rounded-3xl p-8 xl:p-10 ring-1 ring-[#4b4b4b] delay-[300ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
-            data-taos-offset="200">
+            <div
+              class="rounded-3xl p-8 xl:p-10 ring-1 ring-[#4b4b4b] delay-[300ms] duration-[300ms] taos:[transform:perspective(2500px)_rotateY(100deg)] taos:invisible taos:[backface-visibility:hidden]"
+              data-taos-offset="200">
               <div class=" flex items-center justify-between gap-x-4">
-            <h3 id="tier-family" class="text-lg font-semibold leading-8 text-white">Family</h3>
+                <h3 id="tier-family" class="text-lg font-semibold leading-8 text-white">Family</h3>
+              </div>
+              <p class="mt-4 text-sm leading-6 text-white">Berbagi hiburan bersama keluarga tak pernah semudah ini.
+              </p>
+              <p class="mt-6 flex items-baseline gap-x-1">
+                <span class="text-4xl font-bold tracking-tight text-white">Rp 80.000</span>
+                <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
+              </p>
+              <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Semua fitur Premium
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Kualitas video hingga 4K
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  5 perangkat
+                </li>
+                <li class="flex gap-x-3">
+                  <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  Profil terpisah
+                </li>
+              </ul>
+              <a onclick="redirectTo404()" aria-describedby="tier-family"
+                class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1aaaff] text-[#1aaaff] ring-1 ring-inset ring-[#1aaaff] transition-colors duration-200 ease-in-out hover:text-white hover:ring-white hover:focus-visible:outline-white cursor-pointer">Beli
+                Paket
+              </a>
+            </div>
           </div>
-          <p class="mt-4 text-sm leading-6 text-white">Berbagi hiburan bersama keluarga tak pernah semudah ini.
-          </p>
-          <p class="mt-6 flex items-baseline gap-x-1">
-            <span class="text-4xl font-bold tracking-tight text-white">Rp 80.000</span>
-            <span class="text-sm font-semibold leading-6 text-white">/ bulan</span>
-          </p>
-          <ul role="list" class="mt-6 space-y-3 text-sm leading-6 text-white">
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd" />
-              </svg>
-              Semua fitur Premium
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd" />
-              </svg>
-              Kualitas video hingga 4K
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd" />
-              </svg>
-              5 perangkat
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-6 w-5 flex-none text-[#1aaaff]" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                  clip-rule="evenodd" />
-              </svg>
-              Profil terpisah
-            </li>
-          </ul>
-          <a onclick="buyPackage()" aria-describedby="tier-family"
-            class="mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1aaaff] text-[#1aaaff] ring-1 ring-inset ring-[#1aaaff] transition-colors duration-200 ease-in-out hover:text-white hover:ring-white hover:focus-visible:outline-white cursor-pointer">Beli
-            Paket
-          </a>
         </div>
-      </div>
-      </div>
       </div>
     </section>
 

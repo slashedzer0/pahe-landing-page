@@ -138,6 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function buyPackage() {
+function redirectTo404() {
   window.open("/404.html", "_blank");
 }
