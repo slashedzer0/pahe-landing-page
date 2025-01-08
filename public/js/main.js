@@ -36,6 +36,57 @@ document.addEventListener("DOMContentLoaded", () => {
   radioButtons[0].disabled = true;
 });
 
+async function fetchTrendingContent() {
+  try {
+    const apiKey = '9b78cb7647f1ce388ad91a29b98bdc4a';
+    const [moviesResponse, tvResponse] = await Promise.all([
+      fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`),
+      fetch(`https://api.themoviedb.org/3/trending/tv/week?api_key=${apiKey}`)
+    ]);
+
+    const [moviesData, tvData] = await Promise.all([
+      moviesResponse.json(),
+      tvResponse.json()
+    ]);
+
+    const combined = [];
+    const maxLength = Math.max(moviesData.results.length, tvData.results.length);
+    
+    for (let i = 0; i < maxLength; i++) {
+      if (moviesData.results[i]) {
+        combined.push({ ...moviesData.results[i], type: 'movie' });
+      }
+      if (tvData.results[i]) {
+        combined.push({ ...tvData.results[i], type: 'tv' });
+      }
+    }
+
+    return combined.slice(0, 4).map(item => ({
+      imageUrl: `https://image.tmdb.org/t/p/w500${item.poster_path}`,
+      type: item.type,
+      title: item.type === 'movie' ? item.title : item.name
+    }));
+  } catch (error) {
+    console.error('Error fetching trending content:', error);
+    return [];
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const trendingContent = await fetchTrendingContent();
+  const contentImages = document.querySelectorAll('#trendingMovies img');
+  const contentLinks = document.querySelectorAll('#trendingMovies a');
+  
+  trendingContent.forEach((content, index) => {
+    if (contentImages[index]) {
+      contentImages[index].src = content.imageUrl;
+      contentImages[index].alt = content.title;
+      // Optional: Add title attribute for hover tooltip
+      contentLinks[index].title = `${content.title} (${content.type === 'movie' ? 'Film' : 'Serial TV'})`;
+    }
+  });
+});
+
 function openPopup() {
   const overlay = document.createElement("div");
   overlay.id = "overlay";
